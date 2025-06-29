@@ -35,5 +35,5 @@ dist-ssr
 .netlify/
 
 # Temporary logo files at root
-samsung-logo-new.png
-new-logos/
+/samsung-logo-new.png
+/new-logos/
