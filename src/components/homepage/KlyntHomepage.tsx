@@ -8,9 +8,7 @@ import netflixLogo from '../../assets/images/brands/netflix-logo.jpeg';
 import playstationLogo from '../../assets/images/brands/playstation-logo.jpeg';
 import sheinLogo from '../../assets/images/brands/shein-logo.jpeg';
 import amazonLogo from '../../assets/images/brands/amazon-logo.jpeg';
-import samsungLogo from '../../assets/images/samsung-logo.svg';
-import klyntLogo from '../../assets/images/klynt-logo.svg';
-import deliveryPersonImg from '../../assets/images/delivery-person.svg';
+import samsungLogo from '../../assets/images/brands/samsung-logo-new.png';
 import nowOpenImg from '../../assets/images/now-open.svg';
 
 interface KlyntHomepageProps {
@@ -76,7 +74,7 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
     },
     { 
       name: 'Local Delivery', 
-      logo: deliveryPersonImg,
+      icon: '🚚',
       description: 'Fast local shipping',
       brands: ['Express Delivery'],
       gradientFrom: '#059669',
@@ -99,8 +97,14 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center shadow-md overflow-hidden">
-                <img src={klyntLogo} alt="Klynt Shipment" className="w-full h-full object-contain" style={{ filter: 'brightness(1.1) contrast(1.05)' }} />
+              <div className="w-10 h-10 bg-caribbean-blue rounded-lg flex items-center justify-center shadow-md">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z"/>
+                </svg>
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-gray-900">Klynt</h1>
+                <p className="text-xs text-gray-600 -mt-1">Shipment</p>
               </div>
             </div>
 
@@ -373,37 +377,23 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
                           }}
                         />
                       </div>
-                    ) : service.logo ? (
+                    ) : (
                       <div 
+                        className="text-5xl transition-transform duration-300"
                         style={{
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
-                          backgroundColor: 'rgba(255,255,255,0.08)',
-                          borderRadius: '16px',
-                          padding: '1rem',
-                          boxShadow: '0 6px 20px rgba(255,255,255,0.08), inset 0 1px 0 rgba(255,255,255,0.1)',
-                          width: '84px',
-                          height: '84px',
-                          border: '1px solid rgba(255,255,255,0.12)',
-                          backdropFilter: 'blur(8px)'
+                          width: '80px',
+                          height: '80px',
+                          borderRadius: '12px',
+                          background: 'rgba(255,255,255,0.1)',
+                          backdropFilter: 'blur(10px)'
                         }}
                       >
-                        <img 
-                          src={service.logo} 
-                          alt={`${service.name} icon`}
-                          style={{ 
-                            height: '42px',
-                            width: 'auto',
-                            maxWidth: '64px',
-                            objectFit: 'contain',
-                            borderRadius: '8px',
-                            backgroundColor: 'transparent',
-                            filter: 'brightness(1.05) drop-shadow(0 2px 6px rgba(255,255,255,0.15))'
-                          }}
-                        />
+                        {(service as any).icon}
                       </div>
-                    ) : null}
+                    )}
                   </div>
                   
                   <h3 className="text-xl font-bold mb-3" style={{ 
