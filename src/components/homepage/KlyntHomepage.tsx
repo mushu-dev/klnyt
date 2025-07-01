@@ -9,6 +9,7 @@ import playstationLogo from '../../assets/images/brands/playstation-logo.jpeg';
 import sheinLogo from '../../assets/images/brands/shein-logo.jpeg';
 import amazonLogo from '../../assets/images/brands/amazon-logo.jpeg';
 import samsungLogo from '../../assets/images/brands/samsung-logo-new.png';
+import klyntLogo from '../../assets/images/klynt-shipment-logo.png';
 import nowOpenImg from '../../assets/images/now-open.svg';
 
 interface KlyntHomepageProps {
@@ -96,15 +97,9 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-caribbean-blue rounded-lg flex items-center justify-center shadow-md">
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z"/>
-                </svg>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Klynt</h1>
-                <p className="text-xs text-gray-600 -mt-1">Shipment</p>
+            <div className="flex items-center">
+              <div className="w-16 h-16 bg-white rounded-xl shadow-lg border-2 border-gray-100 p-2 flex items-center justify-center">
+                <img src={klyntLogo} alt="Klynt Shipment" className="w-full h-full object-contain" />
               </div>
             </div>
 
