@@ -379,18 +379,15 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
                         }}
                       >
                         {service.name === 'Electronics' ? (
-                          <div style={{
-                            fontSize: '14px',
-                            fontWeight: 'bold',
-                            color: '#ffffff',
-                            background: 'linear-gradient(135deg, #6b7280 0%, #ffffff 100%)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            letterSpacing: '2px',
-                            fontFamily: 'Arial, sans-serif'
-                          }}>
-                            SAMSUNG
-                          </div>
+                          <img 
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTAwIDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2YjcyODAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMDAwMDAwIi8+PHRleHQgeD0iNTAiIHk9IjI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ1cmwoI2dyYWQpIiBsZXR0ZXItc3BhY2luZz0iMnB4Ij5TQU1TVU5HPC90ZXh0Pjwvc3ZnPg=="
+                            alt="Samsung Logo"
+                            style={{
+                              height: '32px',
+                              width: 'auto',
+                              objectFit: 'contain'
+                            }}
+                          />
                         ) : (
                           <img 
                             src={service.logo} 
