@@ -9,7 +9,6 @@ import playstationLogo from '../../assets/images/brands/playstation-logo.jpeg';
 import sheinLogo from '../../assets/images/brands/shein-logo.jpeg';
 import amazonLogo from '../../assets/images/brands/amazon-logo.jpeg';
 import samsungLogo from '../../assets/images/brands/samsung-logo-new.png';
-import klyntLogo from '../../assets/images/klynt-shipment-logo.png';
 import nowOpenImg from '../../assets/images/now-open.svg';
 
 interface KlyntHomepageProps {
