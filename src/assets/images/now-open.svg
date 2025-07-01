@@ -1,0 +1,5 @@
+<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="150" rx="20" fill="#40E0D0"/>
+  <text x="150" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF">NOW</text>
+  <text x="150" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FFFF00">OPEN</text>
+</svg>

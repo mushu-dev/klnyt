@@ -1,0 +1,25 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="150" fill="#FFF8E1" opacity="0.8"/>
+  
+  <!-- Truck -->
+  <rect x="180" y="240" width="80" height="40" rx="8" fill="#E91E63"/>
+  <rect x="140" y="250" width="40" height="30" rx="6" fill="#AD1457"/>
+  <circle cx="160" cy="290" r="15" fill="#424242"/>
+  <circle cx="240" cy="290" r="15" fill="#424242"/>
+  
+  <!-- Shopping bag -->
+  <path d="M120 160 Q120 140 140 140 Q160 140 160 160 L160 220 Q160 240 140 240 Q120 240 120 220 Z" fill="#AD1457"/>
+  <rect x="125" y="150" width="30" height="5" fill="#E91E63"/>
+  <path d="M130 160 Q135 150 145 160" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  
+  <!-- WiFi symbol -->
+  <path d="M140 190 Q150 180 160 190" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+  <path d="M135 195 Q150 175 165 195" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  <circle cx="150" cy="200" r="2" fill="#FFFFFF"/>
+  
+  <!-- Text -->
+  <text x="200" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#6B21A8">KLYNT SHIPMENT</text>
+  <text x="200" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7C3AED">ONLINE SHOPPING & DELIVERY</text>
+  <text x="200" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7C3AED">SERVICE</text>
+</svg>

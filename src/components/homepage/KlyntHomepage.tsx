@@ -8,7 +8,10 @@ import netflixLogo from '../../assets/images/brands/netflix-logo.jpeg';
 import playstationLogo from '../../assets/images/brands/playstation-logo.jpeg';
 import sheinLogo from '../../assets/images/brands/shein-logo.jpeg';
 import amazonLogo from '../../assets/images/brands/amazon-logo.jpeg';
-import samsungLogo from '../../assets/images/brands/samsung-logo-new.png';
+import samsungLogo from '../../assets/images/samsung-logo.svg';
+import klyntLogo from '../../assets/images/klynt-logo.svg';
+import deliveryPersonImg from '../../assets/images/delivery-person.svg';
+import nowOpenImg from '../../assets/images/now-open.svg';
 
 interface KlyntHomepageProps {
   onStartOrder: () => void;
@@ -73,9 +76,9 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
     },
     { 
       name: 'Local Delivery', 
-      icon: '🚚', 
+      logo: deliveryPersonImg,
       description: 'Fast local shipping',
-      brands: ['Express Delivery', 'Same Day'],
+      brands: ['Express Delivery'],
       gradientFrom: '#059669',
       gradientTo: '#10B981'
     }
@@ -96,12 +99,8 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-caribbean-blue rounded-lg flex items-center justify-center shadow-md">
-                <Package className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Klynt</h1>
-                <p className="text-xs text-gray-600 -mt-1">Shipment</p>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+                <img src={klyntLogo} alt="Klynt Shipment" className="w-full h-full object-contain" style={{ filter: 'brightness(1.1) contrast(1.05)' }} />
               </div>
             </div>
 
@@ -453,10 +452,12 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
       {/* Promo Banner */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-yellow-400 rounded-xl shadow-md p-6 text-center border border-yellow-500">
-            <Clock className="w-8 h-8 text-yellow-800 mx-auto mb-3" />
-            <p className="text-lg font-bold text-yellow-900">
-              We're currently operational! Orders are being processed normally.
+          <div className="bg-gradient-to-r from-cyan-400 to-yellow-400 rounded-xl shadow-md p-6 text-center border border-cyan-500">
+            <div className="flex justify-center mb-3">
+              <img src={nowOpenImg} alt="Now Open" className="h-16 w-auto" style={{ filter: 'brightness(1.1)' }} />
+            </div>
+            <p className="text-lg font-bold text-white">
+              Orders are being processed normally!
             </p>
           </div>
         </div>
