@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Package, Phone, MessageCircle, Truck, CreditCard, Clock, Star, Instagram, Mail } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle, Truck, CreditCard, Clock, Star, Instagram, Mail } from 'lucide-react';
 import { SupportContact } from '../common/SupportContact';
 
 // Import brand logos
@@ -373,23 +373,37 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
                           }}
                         />
                       </div>
-                    ) : (
+                    ) : service.logo ? (
                       <div 
-                        className="text-5xl transition-transform duration-300"
                         style={{
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
-                          width: '80px',
-                          height: '80px',
-                          borderRadius: '12px',
-                          background: 'rgba(255,255,255,0.1)',
-                          backdropFilter: 'blur(10px)'
+                          backgroundColor: 'rgba(255,255,255,0.08)',
+                          borderRadius: '16px',
+                          padding: '1rem',
+                          boxShadow: '0 6px 20px rgba(255,255,255,0.08), inset 0 1px 0 rgba(255,255,255,0.1)',
+                          width: '84px',
+                          height: '84px',
+                          border: '1px solid rgba(255,255,255,0.12)',
+                          backdropFilter: 'blur(8px)'
                         }}
                       >
-                        {service.icon}
+                        <img 
+                          src={service.logo} 
+                          alt={`${service.name} icon`}
+                          style={{ 
+                            height: '42px',
+                            width: 'auto',
+                            maxWidth: '64px',
+                            objectFit: 'contain',
+                            borderRadius: '8px',
+                            backgroundColor: 'transparent',
+                            filter: 'brightness(1.05) drop-shadow(0 2px 6px rgba(255,255,255,0.15))'
+                          }}
+                        />
                       </div>
-                    )}
+                    ) : null}
                   </div>
                   
                   <h3 className="text-xl font-bold mb-3" style={{ 

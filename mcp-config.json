@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "klynt-puppeteer-global": {
+      "command": "mcp-server-puppeteer",
+      "args": [],
+      "env": {
+        "PUPPETEER_LAUNCH_OPTIONS": "{ \"headless\": false }"
+      }
+    },
+    "klynt-puppeteer-npx": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+      "env": {
+        "PUPPETEER_LAUNCH_OPTIONS": "{ \"headless\": false }"
+      }
+    },
+    "klynt-puppeteer-local": {
+      "command": "node",
+      "args": ["/home/mushu/Development/Projects/klnyt/mcp-servers/puppeteer/server.js"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}

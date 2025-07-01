@@ -1,0 +1,20 @@
+{
+  "name": "klynt-puppeteer-mcp-server",
+  "version": "1.0.0",
+  "description": "Puppeteer MCP server for Klynt web automation and UI debugging",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "klynt-puppeteer-server": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "puppeteer": "^24.11.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
