@@ -8,7 +8,7 @@ import netflixLogo from '../../assets/images/brands/netflix-logo.jpeg';
 import playstationLogo from '../../assets/images/brands/playstation-logo.jpeg';
 import sheinLogo from '../../assets/images/brands/shein-logo.jpeg';
 import amazonLogo from '../../assets/images/brands/amazon-logo.jpeg';
-import samsungLogo from '../../assets/images/brands/samsung-logo-black.jpg';
+// import samsungLogo from '../../assets/images/brands/samsung-logo-black.jpg';
 import nowOpenImg from '../../assets/images/now-open.svg';
 
 interface KlyntHomepageProps {
@@ -38,7 +38,7 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
     },
     { 
       name: 'Electronics', 
-      logo: samsungLogo,
+      logo: '/samsung-black.jpg',
       description: 'Gadgets and tech items',
       brands: ['Samsung', 'Apple', 'Android'],
       gradientFrom: '#f8fafc',
@@ -378,21 +378,34 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
                           backdropFilter: 'blur(8px)'
                         }}
                       >
-                        <img 
-                          src={service.logo} 
-                          alt={`${service.name} logo`}
-                          style={{ 
-                            height: '42px',
-                            width: 'auto',
-                            maxWidth: '64px',
-                            objectFit: 'contain',
-                            borderRadius: '8px',
-                            backgroundColor: 'transparent',
-                            filter: service.name === 'Electronics' 
-                              ? 'drop-shadow(0 1px 3px rgba(0,0,0,0.1))' 
-                              : 'brightness(1.05) drop-shadow(0 2px 6px rgba(255,255,255,0.15))'
-                          }}
-                        />
+                        {service.name === 'Electronics' ? (
+                          <div style={{
+                            fontSize: '14px',
+                            fontWeight: 'bold',
+                            color: '#ffffff',
+                            background: 'linear-gradient(135deg, #6b7280 0%, #ffffff 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            letterSpacing: '2px',
+                            fontFamily: 'Arial, sans-serif'
+                          }}>
+                            SAMSUNG
+                          </div>
+                        ) : (
+                          <img 
+                            src={service.logo} 
+                            alt={`${service.name} logo`}
+                            style={{ 
+                              height: '42px',
+                              width: 'auto',
+                              maxWidth: '64px',
+                              objectFit: 'contain',
+                              borderRadius: '8px',
+                              backgroundColor: 'transparent',
+                              filter: 'brightness(1.05) drop-shadow(0 2px 6px rgba(255,255,255,0.15))'
+                            }}
+                          />
+                        )}
                       </div>
                     ) : (
                       <div 
@@ -583,13 +596,21 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
                   boxShadow: '0 2px 8px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.1)'
                 }}
               >
-                <img src={samsungLogo} alt="Samsung" style={{
-                  height: '48px',
-                  width: 'auto',
-                  maxWidth: '100%',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.1))'
-                }} />
+                <div style={{
+                  fontSize: '14px',
+                  fontWeight: 'bold',
+                  background: 'linear-gradient(135deg, #6b7280 0%, #ffffff 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  letterSpacing: '2px',
+                  fontFamily: 'Arial, sans-serif',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: '48px'
+                }}>
+                  SAMSUNG
+                </div>
               </div>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 border border-gray-100/50">
