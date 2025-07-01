@@ -98,19 +98,27 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <img
-                src="/klynt-logo.png"
-                alt="Klynt Shipment Logo"
-                className="h-12 object-contain rounded-lg bg-white shadow-lg border border-gray-100 transition-all duration-300"
-                style={{
-                  boxShadow: '0 0 12px rgba(0, 204, 255, 0.35)',
-                  padding: '8px'
-                }}
-                onError={(e) => { e.currentTarget.style.display = 'none'; }}
-              />
-              <span className="ml-3 text-xl font-semibold text-gray-900 font-sans">
-                Klynt Shipment
-              </span>
+              <div className="relative">
+                <img
+                  src="/klynt-logo-new.jpg"
+                  alt="Klynt Shipment Logo"
+                  className="h-14 w-auto object-contain rounded-xl transition-all duration-300 hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+                    boxShadow: '0 0 20px rgba(220, 38, 38, 0.3), 0 4px 15px rgba(0, 0, 0, 0.1)',
+                    padding: '6px',
+                    border: '2px solid rgba(220, 38, 38, 0.1)'
+                  }}
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
+                <div 
+                  className="absolute inset-0 rounded-xl pointer-events-none"
+                  style={{
+                    background: 'radial-gradient(circle at 60% 40%, rgba(220, 38, 38, 0.15) 0%, transparent 70%)',
+                    animation: 'pulse 2s ease-in-out infinite alternate'
+                  }}
+                />
+              </div>
             </div>
 
             {/* Desktop Navigation */}
