@@ -8,7 +8,7 @@ import netflixLogo from '../../assets/images/brands/netflix-logo.jpeg';
 import playstationLogo from '../../assets/images/brands/playstation-logo.jpeg';
 import sheinLogo from '../../assets/images/brands/shein-logo.jpeg';
 import amazonLogo from '../../assets/images/brands/amazon-logo.jpeg';
-import samsungLogo from '../../assets/images/brands/samsung-logo.jpg';
+import samsungLogo from '../../assets/images/brands/samsung-logo-fixed.jpeg';
 import nowOpenImg from '../../assets/images/now-open.svg';
 
 interface KlyntHomepageProps {
@@ -45,7 +45,6 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
       gradientTo: '#ffffff',
       logoBackground: 'transparent',
       textColor: '#000000',
-      fallbackText: 'SAMSUNG'
     },
     { 
       name: 'Streaming Services', 
@@ -387,15 +386,6 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
                             filter: service.name === 'Electronics' 
                               ? 'drop-shadow(0 1px 3px rgba(0,0,0,0.1))' 
                               : 'brightness(1.05) drop-shadow(0 2px 6px rgba(255,255,255,0.15))'
-                          }}
-                          onError={(e) => {
-                            if ((service as any).fallbackText) {
-                              e.currentTarget.style.display = 'none';
-                              const parent = e.currentTarget.parentElement;
-                              if (parent) {
-                                parent.innerHTML = `<div style="font-size: 16px; font-weight: bold; color: #1428A0; letter-spacing: 2px;">${(service as any).fallbackText}</div>`;
-                              }
-                            }
                           }}
                         />
                       </div>
