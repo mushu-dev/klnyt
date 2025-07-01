@@ -98,9 +98,19 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="w-16 h-16 bg-white rounded-xl shadow-lg border-2 border-gray-100 p-2 flex items-center justify-center">
-                <img src={klyntLogo} alt="Klynt Shipment" className="w-full h-full object-contain" />
-              </div>
+              <img
+                src="/klynt-logo.png"
+                alt="Klynt Shipment Logo"
+                className="h-12 object-contain rounded-lg bg-white shadow-lg border border-gray-100 transition-all duration-300"
+                style={{
+                  boxShadow: '0 0 12px rgba(0, 204, 255, 0.35)',
+                  padding: '8px'
+                }}
+                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+              />
+              <span className="ml-3 text-xl font-semibold text-gray-900 font-sans">
+                Klynt Shipment
+              </span>
             </div>
 
             {/* Desktop Navigation */}
