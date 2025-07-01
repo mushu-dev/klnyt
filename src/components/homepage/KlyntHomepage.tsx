@@ -8,7 +8,7 @@ import netflixLogo from '../../assets/images/brands/netflix-logo.jpeg';
 import playstationLogo from '../../assets/images/brands/playstation-logo.jpeg';
 import sheinLogo from '../../assets/images/brands/shein-logo.jpeg';
 import amazonLogo from '../../assets/images/brands/amazon-logo.jpeg';
-import samsungLogo from '../../assets/images/brands/samsung-logo-fixed.jpeg';
+import samsungLogo from '../../assets/images/brands/samsung-logo-black.jpg';
 import nowOpenImg from '../../assets/images/now-open.svg';
 
 interface KlyntHomepageProps {
@@ -41,10 +41,11 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
       logo: samsungLogo,
       description: 'Gadgets and tech items',
       brands: ['Samsung', 'Apple', 'Android'],
-      gradientFrom: '#ffffff',
-      gradientTo: '#ffffff',
-      logoBackground: 'transparent',
+      gradientFrom: '#f8fafc',
+      gradientTo: '#e2e8f0',
+      logoBackground: '#000000',
       textColor: '#000000',
+      specialStyling: true
     },
     { 
       name: 'Streaming Services', 
@@ -359,15 +360,19 @@ export function KlyntHomepage({ onStartOrder, onTrackOrder, onAdminAccess, onInf
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
-                          backgroundColor: service.name === 'Electronics' ? '#ffffff' : 'rgba(255,255,255,0.08)',
+                          backgroundColor: (service as any).specialStyling ? '#000000' : service.name === 'Electronics' ? '#ffffff' : 'rgba(255,255,255,0.08)',
                           borderRadius: '16px',
                           padding: '1rem',
-                          boxShadow: service.name === 'Electronics' 
+                          boxShadow: (service as any).specialStyling 
+                            ? '0 8px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)' 
+                            : service.name === 'Electronics' 
                             ? '0 4px 16px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.1)' 
                             : '0 6px 20px rgba(255,255,255,0.08), inset 0 1px 0 rgba(255,255,255,0.1)',
                           width: '84px',
                           height: '84px',
-                          border: service.name === 'Electronics' 
+                          border: (service as any).specialStyling 
+                            ? '3px solid #000000' 
+                            : service.name === 'Electronics' 
                             ? '1px solid rgba(0,0,0,0.05)' 
                             : '1px solid rgba(255,255,255,0.12)',
                           backdropFilter: 'blur(8px)'
